@@ -1,13 +1,4 @@
-/* /* .middle-content {
-  padding: 45px;
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-} */
-
+/* footer */
 .footer-content {
   width: auto;
   height: auto;
@@ -64,11 +55,11 @@
   text-decoration: center;
 }
 
-p {
+.footer-content p {
   font-size: 16px;
 }
 
-h4 {
+.footer-content h4 {
   color: #5f1985;
 }
 
@@ -83,37 +74,4 @@ h4 {
   flex-direction: row;
   margin: 10px;
   padding: 10px;
-}
-h2 {
-  color: #5f1985;
-  font-weight: bold;
-}
-.img {
-  outline: 1px solid red;
-  width: 250px;
-}
-.img,
-.word {
-  text-align: center;
-  outline: 1px solid red;
-}
-.hand,
-.light,
-.restaurant,
-.blood {
-  width: 25%;
-  display: flex;
-  align-items: center;
-}
-.hand,
-.light,
-.restaurant,
-.blood {
-  fill: #595757;
-}
-.hand:hover,
-.light:hover,
-.restaurant:hover,
-.blood:hover {
-  fill: #f7b52c;
 }
