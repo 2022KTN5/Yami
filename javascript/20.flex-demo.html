@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex demo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      a {
+        color: rgb(165, 79, 79);
+        text-decoration: none;
+      }
+
+      .mb-20 {
+        margin-bottom: 20px;
+      }
+
+      .mb-100 {
+        margin-bottom: 100px;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .w-100 {
+        width: 100%;
+      }
+
+      .order1 {
+        order: 1;
+      }
+
+      .order2 {
+        order: 2;
+      }
+
+      .container {
+        width: 960px;
+        margin: 40px auto;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .d-flex {
+        display: flex !important;
+      }
+
+      .justify-content-center {
+        justify-content: center;
+      }
+
+      .justify-content-between {
+        justify-content: space-between;
+      }
+
+      /* Nav Start */
+
+      .nav-left,
+      .nav-logo,
+      .nav-right {
+        width: 33.3333%;
+        min-height: 50px;
+        /* outline: 1px solid red; */
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-left a {
+        margin-right: 10px;
+      }
+
+      .nav-logo {
+        justify-content: center;
+      }
+
+      .nav-right {
+        justify-content: flex-end;
+      }
+
+      .nav-right .social-icons {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+
+      /* Nav End */
+
+      .buy-link {
+        background-color: #777;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .img-300 {
+        width: 300px;
+        height: 300px;
+      }
+
+      .img-300 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .sub-title {
+        width: 300px;
+      }
+
+      .model-demo {
+        width: 500px;
+        height: 700px;
+      }
+
+      .model-demo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .link-title a {
+        font-size: 2rem;
+        color: #ccc;
+        text-decoration: underline;
+      }
+
+      .img-77 {
+        width: 70%;
+        height: 400px;
+      }
+
+      .img-77 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .img-37 {
+        width: 30%;
+        height: 400px;
+      }
+
+      .img-37 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <div class="row">
+          <div class="nav-left">
+            <a href="#">Shop</a>
+            <a href="#">Lookbook</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="nav-logo">Alameda</div>
+          <div class="nav-right">
+            <div class="social-icons">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="social-icons">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social-icons">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="row justify-content-between mb-20">
+          <h2>New In</h2>
+          <a class="buy-link" href="#">Shop Now</a>
+        </div>
+
+        <div class="row justify-content-between mb-100">
+          <div class="items">
+            <div class="img-300">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                alt=""
+              />
+            </div>
+            <p>Linen Top / Blue</p>
+          </div>
+          <div class="items">
+            <div class="img-300">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                alt=""
+              />
+            </div>
+            <p>Linen Top / Blue</p>
+          </div>
+          <div class="items">
+            <div class="img-300">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                alt=""
+              />
+            </div>
+            <p>Linen Top / Blue</p>
+          </div>
+        </div>
+
+        <div class="row sub-title mb-100 mx-auto">
+          <span>
+            Made with love in Los Angeles from all natural eco-friendly
+            materials.
+          </span>
+        </div>
+
+        <div class="row">
+          <div class="demo-area d-flex justify-content-between w-100">
+            <div class="product-info">
+              <div class="items">
+                <div class="img-300">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                    alt=""
+                  />
+                </div>
+                <p>Linen Top / Blue</p>
+                <p>$50.00</p>
+              </div>
+            </div>
+
+            <div class="model-demo">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1587757476336-N31G7MJXSMQ4QZSEJ6CO/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/lauren-winter-20150715-IMG_0352-v1-FINAL.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-20">
+          <div class="demo-area d-flex justify-content-between w-100">
+            <div class="product-info order2">
+              <div class="items">
+                <div class="img-300">
+                  <img
+                    src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                    alt=""
+                  />
+                </div>
+                <p>Linen Top / Blue</p>
+                <p>$50.00</p>
+              </div>
+            </div>
+
+            <div class="model-demo order1">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1587757476336-N31G7MJXSMQ4QZSEJ6CO/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/lauren-winter-20150715-IMG_0352-v1-FINAL.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center link-title">
+          <a href="#">View Lookbook</a>
+        </div>
+
+        <div class="row">
+          <div class="img-77">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1587758139960-E6HIVHJV9ITG7B3AEHCY/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/lauren-winter-20150715-IMG_7450-v1-FINAL.jpg?format=750w"
+              alt=""
+            />
+          </div>
+
+          <div class="img-37">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1587758261288-OTRMED62HCYJ198J61UU/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/lauren-winter-20150715-IMG_0636-v1-FINAL.jpg?format=500w"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
