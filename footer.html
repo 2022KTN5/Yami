@@ -2,8 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="footer.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -11,55 +19,431 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
-    <script src="http://kit.fontawesome.com/a076d5399.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
-    <link rel="stylesheet" href="restaurant.css" />
   </head>
   <body>
- 
+    <header class="navbar-header">
+      <div class="wrapper">
+        <div class="logo">
+          <img src="./images/LOGO.png" alt="" width="300px" />
+        </div>
+        <nav class="navbar-nav">
+          <div class="dropdown">
+            <div class="activity">
+              <a href="#">公益活動<i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-content">
+                <li><a href="#">公益活動</a></li>
+                <li><a href="#">數位發票箱</a></li>
+                <li><a href="#">愛心捐款</a></li>
+              </ul>
+            </div>
+            <div class="invoice">
+              <a href="#">公益捐贈<i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-content">
+                <li><a href="#">物資捐贈</a></li>
+              </ul>
+            </div>
+            <a href="#">愛心餐廳</a>
+            <a href="#">捐血地圖</a>
+          </div>
+        </nav>
+        <div class="buttons">
+          <div class="login btn"><a href="#">會員登入</a></div>
+          <div class="register btn"><a href="#">註冊</a></div>
+        </div>
     </div>
-    <br />
-    <br />
-    <br />
+    </header>
+    <main>
+      <section class="slide-show">
+        <!-- <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="images/3.jpg" alt="" id="lastClone" />
+            <img src="images/1.jpg" alt="" />
+            <img src="images/2.jpg" alt="" />
+            <img src="images/3.jpg" alt="" />
+            <img src="images/1.jpg" alt="" id="firstClone" />
+          </div>
+        </div>
+        <button id="prevBtn">prev</button>
+        <button id="nextBtn">next</button> -->
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <img src="https://github.com/yingyueh/Final-project/blob/master/images/1.jpg?raw=true" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://github.com/yingyueh/Final-project/blob/master/images/homepage.jpg?raw=true" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://github.com/yingyueh/Final-project/blob/master/images/homepage.jpg?raw=true" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="container p-5">
+          <div class="d-flex">
+            <div class="col-6 text-center">
+              <img src="https://github.com/yingyueh/Final-project/blob/master/images/about-us.jpg?raw=true" width="450px" alt="">
+            </div>
+            <div class="col-6 px-6">
+              <h4 class="mb-3">我們是誰</h4>
+              <p>「樂心公益平台」是一個線上公益平台，協助公益單位募款、募資及提供各種公益相關的資訊，透過網路縮短公益團體與捐款人的距離；透過平台降低公益團體使用網路募款的門檻，並提供捐款人多元捐款方式，簡化捐款流程，讓募款及捐款都更有效率、更透明！</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="achievement">
+        <div class="container p-5">
+          <div class="d-flex justify-content-evenly">
+            <div class="col-2 item d-flex flex-column align-items-center">
+              <div class="circle d-flex flex-column align-items-center justify-content-center pt-3">
+                <i class="fas fa-hand-holding-heart mb-4"></i>
+                <p class="title-text text-center">捐款人數</p>
+                <p class="number-text counter" data-target="23000">0</p>
+              </div>
+            </div>
+            <div class="col-2 item d-flex flex-column align-items-center">
+              <div class="circle d-flex flex-column align-items-center justify-content-center pt-3">
+                <i class="fas fa-dollar-sign mb-4"></i>
+                <p class="title-text text-center">募資總金額</p>
+                <p class="number-text counter" data-target="650000">0</p>
+              </div>
+            </div>
+            <div class="col-2 item d-flex flex-column align-items-center">
+              <div class="circle d-flex flex-column align-items-center justify-content-center pt-3">
+                <i class="fas fa-clipboard-check mb-4"></i>
+                <p class="title-text text-center">募資成功專案</p>
+                <p class="number-text counter" data-target="3000">0</p>
+              </div>
+            </div>
+            <div class="col-2 item d-flex flex-column align-items-center">
+              <div class="circle d-flex flex-column align-items-center justify-content-center pt-3">
+                <i class="far fa-handshake mb-4"></i>
+                <p class="title-text text-center">合作公益單位</p>
+                <p class="number-text counter" data-target="6000">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="container p-5">
+          <div class="d-flex row justify-content-center">
+          <h3><img src="https://cdn-icons-png.flaticon.com/512/6512/6512737.png" alt="" class="me-2" width="50px">最新募資需求</img></h3>
+            <!-- Card -->
+            <div class="col-4 d-flex justify-content-center">
+              <div class="mb-3">
+                <div class="card" style="width: 21rem">
+                  <img
+                    src="https://diat4w9qa5tx9.cloudfront.net/covers/project_cover/2080/%E5%B0%81%E9%9D%A2rolls-auto-1600x900.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">智慧型手機</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <p class="org">需求單位:</p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        25%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <div class="mb-3">
+                <div class="card" style="width: 21rem">
+                  <img
+                    src="https://diat4w9qa5tx9.cloudfront.net/covers/project_cover/1957/1220x715_03.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <p class="org">需求單位:</p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        25%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <div class="mb-3">
+                <div class="card" style="width: 21rem">
+                  <img
+                    src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <p class="org">需求單位:</p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        25%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <div class="mb-3">
+                <div class="card" style="width: 21rem">
+                  <img
+                    src="https://diat4w9qa5tx9.cloudfront.net/covers/project_cover/2108/%E6%8C%96%E8%B2%9D%E5%BB%A3%E5%91%8A%E5%9C%96N-03.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <p class="org">需求單位:</p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        25%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <div class="mb-3">
+                <div class="card" style="width: 21rem">
+                  <img
+                    src="https://diat4w9qa5tx9.cloudfront.net/covers/project_cover/2153/2022%E6%89%8B%E5%B8%B3%E5%BB%A3%E5%91%8A%E5%BD%B1%E7%89%87thumbnail_.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <p class="org">需求單位:</p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        25%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <div class="mb-3">
+                <div class="card" style="width: 21rem">
+                  <img
+                    src="https://diat4w9qa5tx9.cloudfront.net/covers/project_cover/1961/Asset_31600.png"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <p class="org">需求單位:</p>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 25%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      >
+                        25%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container p-5">
+          <div class="d-flex flex-column">
+            <h3><img src="images/LOGO-02.png" alt="" class="me-2" width="45px">平台服務</img></h3>
+            <div class="text-center mb-5">
+              <h2>有你我一起攜手協力照顧彼此</h4>
+                <h5>所有流程由樂心平台把關，將資源送給需要幫助的人</h5>
+              </div>
+            <div class="d-flex justify-content-center">
+              <div class="col-2">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="icon mb-3">
+                      <img src="./icon/icon-01.svg" width="150px" alt="" href="">
+                  </div>
+                  <div class="title">公益活動</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="icon mb-3"><img src="./icon/icon-02.svg"  width="150px" alt="" href="">
+                
+                </div>
+                  <div class="title">
+                    物資捐贈
+                </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="icon mb-3"><img src="./icon/icon-03.svg" width="150px" alt="" href=""></div>
+                  <div class="title">愛心餐廳</div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="d-flex flex-column align-items-center">
+                  <div class="icon mb-3"><img src="./icon/icon-04.svg" width="150px" alt="" href=""></div>
+                  <div class="title">捐血地圖</div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="invoice2">
+        <img src="./images/invoice-02.jpg" alt="愛心碼" width="1200px">
+      </section>
+    <!-- </main> -->
 
+
+    
     <footer>
-      <div class="footer-content">
-        <div class="left-info co1-12 col-md-4 mb-5 mr-md-4">
+      <section class="footer-content ">
+        <div class="left-info co1-12 mb-5 mr-md-4">
           <div>
-            <img src="/image/LOGO-01.png" alt="" width="70%" />
+            <img src="./images/LOGO.png" alt="" width="60%" />
           </div>
           <br />
           <h4>關於我們</h4>
-          <div class="content">
+          <div class="aboutUs">
             <p>
-              樂心公益提供所有捐款者一個安全、豐富及多元的捐款資訊平台，
-              合法非營利組織。串聯公益團體更容易地在此匯集社會善心資源，讓捐款更透明，捐款人
-              更安心。支持夢想隨手樂捐發揮愛心。公益需要您，順手捐贈能提供需要協助的人援手與完成他們的夢想！
+              樂心公益平台是一個線上公益平台，協助公益單位募款、募資及提供各種公益相關的資訊，透過網路縮短公益團體與捐款人的距離；透過平台降低公益團體使用網路募款的門檻，並提供捐款人多元捐款方式，簡化捐款流程，讓募款及捐款都更有效率、更透明！
             </p>
           </div>
 
           <h4>聯絡我們</h4>
           <div class="phone">
             <i class="fas fa-phone" style="color: #5f1985"> </i>
-            <span style="font-size: 18px">0800-770-885</span><br />
+            <span style="font-size: 18px"> 0800-770-885</span><br />
             <i class="fas fa-envelope" style="color: #5f1985"> </i>
-            <span style="font-size: 18px">Charity@gmail.com</span>
+            <span style="font-size: 18px"> Charity@gmail.com</span>
           </div>
-          <br />
+          <br /> <br />
           <div class="Copyright">
             <p>Copyright© 2022 Charity Inc.</p>
           </div>
         </div>
-        <div class="footer-form">
-          <form>
-            <div class="footer-form2 col-12 col-md-8">
+        <div class="right-form col-12 col-md-8">
+          <div class="footer-form">
+            <form>
               <h4>樂心意見信箱</h4>
               <p>您的鼓勵是我們持續前進的動力，有任何問題歡迎留言給我們。</p>
               <div class="form-group">
@@ -68,7 +452,7 @@
                   type="text"
                   class="form-control"
                   id="name"
-                  placeholder="請輸入姓名"
+                  placeholder="留下您的稱呼"
                   title="name"
                   required
                 />
@@ -79,78 +463,34 @@
                   type="email"
                   class="form-control"
                   id="email"
-                  placeholder="請輸入email"
+                  placeholder="輸入您的email"
                   title="email"
                   required
                 />
               </div>
               <div class="form-group">
-                <div class="form-floating">
                   <label for="message">意見回饋</label>
-                  <textarea
-                    class="form-control"
-                    cols="15"
-                    rows="5"
-                    placeholder="請留下您鼓勵的話語或寶貴的建議"
-                    title="message"
-                    id="message"
-                  ></textarea>
-                </div>
+                <textarea class="form-control" placeholder="您鼓勵的話語或寶貴的建議"  title="message" required
+                id="message" style="height: 150px"></textarea>
+               
+                
+                  <button type="submit" class="btn1 btn-primary">送 出</button>
               </div>
-              <br />
-              <br />
-              <br />
-              <button type="submit" class="btn1 btn-primary">送 出</button>
-            </div>
           </form>
         </div>
-      </div>
+        </div>
+    </section>
+      
     </footer>
+  </main>
+
+
+
+    <script src="practice.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
-
-<!-- </div>
-<script>
-  var httpMethod, resourceUrl;
-  //動態變更httpMethod,resourceUrl之值
-  $("#footer-content :text, #footer-content textarea").on(
-    "focus input",
-    function () {
-      httpMethod = $(this).attr("title");
-      resourceUrl = $(this).val();
-    }
-  );
-  $("#footer-content :text:first").focus();
-
-  $("#footer-form").submit(function () {
-    $.ajax({
-      method: httpMethod,
-      url: resourceUrl,
-      dataType: "json",
-      success: function (data) {
-        $("#msg1").html(JSON.stringify(data));
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        $("#msg1").html(
-          `<span class="color-red">textStatus=${textStatus}; errorThrown=${errorThrown}</span>`
-        );
-      },
-    });
-    return false;
-  });
-</script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-  crossorigin="anonymous"
-></script> -->
